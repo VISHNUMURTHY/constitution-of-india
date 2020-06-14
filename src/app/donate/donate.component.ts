@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl, FormArray } from '@angular/forms';
-import { ValidationMessages } from '../validations/validation.messages';
 import { GENDER_TYPES, SALUTATION_TYPES } from '../constants/app.constants';
 import { STATES } from '../constants/states.constants';
 
@@ -17,7 +16,6 @@ export class DonateComponent implements OnInit {
   disableAddressPanel = true;
   disablePaymentPanel = true;
   donorForm: FormGroup;
-  errorMessages = ValidationMessages.validationErrorMessages;
   genderTypes = GENDER_TYPES;
   salutationTypes = SALUTATION_TYPES;
   states = STATES;

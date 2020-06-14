@@ -3,7 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { USER_NAVIGATION_LINKS } from '../constants/app.constants';
-import { ActivatedRouteSnapshot, ActivatedRoute, Router, NavigationEnd, RouterState } from '@angular/router';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-navigate',
@@ -21,7 +21,7 @@ export class NavigateComponent implements OnInit {
   navigationLinks = USER_NAVIGATION_LINKS;
   headerTitle: string;
 
-  constructor(private breakpointObserver: BreakpointObserver, private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) { }
 
   ngOnInit() {
     

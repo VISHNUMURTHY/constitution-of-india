@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-
-import { ValidationMessages } from '../validations/validation.messages';
-
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -12,7 +9,6 @@ export class ContactUsComponent implements OnInit {
 
   queryForm: FormGroup;
   feedbackForm: FormGroup;
-  errorMessages = ValidationMessages.validationErrorMessages;
 
   constructor(private fb: FormBuilder) { }
 
