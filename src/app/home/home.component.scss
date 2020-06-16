@@ -1,0 +1,61 @@
+:host {
+    background: rgba(100, 100, 10, 0.1);
+    display: flex;
+}
+
+.background-site {
+    margin: 40px;
+    font-size: 16px;
+}
+
+.content {
+    background-color: rgba(0, 110, 214, 0.25);
+    padding: 40px 40px 20px 40px;
+}
+
+.bold-text {
+    font-weight: 500;
+}
+
+p:last-child {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+}
+
+.extra-div {
+    padding: 12px;
+}
+
+.abbreviations-table {
+    background-color: rgba(0, 210, 214, 0.1);
+    padding: 40px;
+}
+
+.abbreviations-header {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.abbreviations-content {
+    width: 50%;
+}
+
+@media screen and (max-width: 700px) {
+    .background-site {
+        margin: 15px;
+        font-size: 14px;
+    }
+
+    .content,
+    .abbreviations-table {
+        padding: 15px;
+    }
+
+    .abbreviations-content {
+        width: 100%;
+    }
+}

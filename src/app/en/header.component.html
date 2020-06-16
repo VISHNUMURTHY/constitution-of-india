@@ -26,10 +26,10 @@
 			</button>
 		</mat-menu>
 	</div>
-	<div [formGroup]="languageForm">
+	<mat-form-field>
 		<select matNativeControl formControlName="language" required>
-			<option value="en">English</option>
-			<option value="ka">ಕನ್ನಡ</option>
+			<option value="query">Query</option>
+			<option value="complaint">Complaint</option>
 		</select>
-	</div>
+	</mat-form-field>
 </header>

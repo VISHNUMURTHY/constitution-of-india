@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { SharedService } from '../shared/services/shared.service';
+import { template } from '../constants/app.constants';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  languageForm = new FormGroup({
+    language: new FormControl('en')
+  });
+
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit(): void {
+    this.languageForm.get('language').valueChanges.subscribe(val => {
+      console.log(val);
+      this.sharedService.setLanguage(val);
+    })
   }
-
 }
+

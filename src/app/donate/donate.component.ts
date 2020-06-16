@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl, FormArray } from '@angular/forms';
-import { GENDER_TYPES, SALUTATION_TYPES } from '../constants/app.constants';
+import { SALUTATION_TYPES } from '../constants/app.constants';
 import { STATES } from '../constants/states.constants';
 
 @Component({
@@ -16,7 +16,6 @@ export class DonateComponent implements OnInit {
   disableAddressPanel = true;
   disablePaymentPanel = true;
   donorForm: FormGroup;
-  genderTypes = GENDER_TYPES;
   salutationTypes = SALUTATION_TYPES;
   states = STATES;
   hardCopyInfo = 'Select this option to recieve Hard copy for donation amount.';

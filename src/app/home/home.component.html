@@ -1,1 +1,146 @@
-<p>home works!</p>
+<div *ngIf="lang==='en'" class="background-site">
+    <div class="content">
+        <p>The <span class="bold-text">“Constitution of India”</span> is the Supreme law of India. This document
+            describes the guidelines required for setting up legislative, executive and judicial systems by government
+            bodies and also the fundamental rights and duties of the citizens in India.</p>
+
+        <p> The Indian Constitution primarily built using Preamble, Articles, Parts, Schedules, Appendices. And also it
+            contains amendments introduced in it at later stages after adopting it by republic India.</p>
+
+        <p> <span class="bold-text">Preamble</span> is a core and brief introductory statement of the indian
+            constitution that sets the guidelines using which people can set up legislative, executive and judicial
+            systems in India. For more details <a>click here</a>.
+        </p>
+
+        <p><span class="bold-text">Articles </span>are the extended version of the preamble that defines guidelines in
+            detail to set up the
+            legislative,
+            executive and judicial system by citizens of India along with their fundamental rights and duties. There are
+            395
+            articles.</p>
+
+        <p><span class="bold-text">Parts</span> is a group of articles which correlates the common functionalities
+            defined by a certain number of
+            articles.
+            There are 22 parts. For more details <a>click here</a>.</p>
+
+        <p><span class="bold-text">Schedules</span> are the extended version of articles which contains a list of items
+            to be defined further. There
+            are 12
+            schedules. For more details <a>click here</a>.</p>
+
+        <p><span class="bold-text">Appendices</span> are the supplementary or subsidiary references present at the end
+            of Indian constitution. There
+            are 5
+            appendices. For more details <a>click here</a>.</p>
+
+        <p><span class="bold-text"> Amendments</span> are the changes introduced in indian constitution based on certain
+            criteria in certain articles
+            without
+            changing the entire document. There are 104 amendments introduced in Indian constitution. For more details
+            <a>click here</a>.</p>
+
+        <p> Let's start to understand the content presented in the articles of Indian constitution and also have a look
+            at below
+            table for list
+            of abbreviations used in this website. <a>Click here</a> to
+            continue.
+        </p>
+    </div>
+    <div class="extra-div"></div>
+    <div class="abbreviations-table">
+        <div class="abbreviations-header">List of Abbreviations</div>
+        <div class="abbreviations-content">
+            <table mat-table [dataSource]="abbreviations" class="mat-elevation-z8">
+
+                <ng-container matColumnDef="abbr">
+                    <th mat-header-cell *matHeaderCellDef> Abbreviation </th>
+                    <td mat-cell *matCellDef="let element"> {{element.abbr}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="fullForm">
+                    <th mat-header-cell *matHeaderCellDef> Full Form </th>
+                    <td mat-cell *matCellDef="let element"> {{element.fullForm}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="lang==='ka'" class="background-site">
+    <div class="content">
+        <p><span class="bold-text">“ಭಾರತದ ಸಂವಿಧಾನ”</span> ಎಂಬುದು ಭಾರತದ ಸರ್ವೋಚ್ಚ ಕಾನೂನು. ಈ ದಾಖಲೆಯು ಸರ್ಕಾರಿ
+            ಸಂಸ್ಥೆಗಳಿಂದ ಶಾಸಕಾಂಗ, ಕಾರ್ಯಾಂಗ ಮತ್ತು ನ್ಯಾಯಾಂಗ ವ್ಯವಸ್ಥೆಗಳನ್ನು ಸ್ಥಾಪಿಸಲು ಅಗತ್ಯವಾದ ಮಾರ್ಗಸೂಚಿಗಳನ್ನು
+            ಮತ್ತು ಭಾರತದ ನಾಗರಿಕರ ಮೂಲಭೂತ ಹಕ್ಕುಗಳು ಮತ್ತು ಕರ್ತವ್ಯಗಳನ್ನು ವಿವರಿಸುತ್ತದೆ.</p>
+
+        <p> The Indian Constitution primarily built using Preamble, Articles, Parts, Schedules, Appendices. And also it
+            contains
+            Amendments introduced in it at later stages after adopting it by republic India.</p>
+
+        <p> <span class="bold-text">Preamble</span> is a core and brief introductory statement of the indian
+            constitution that sets the guidelines
+            using
+            which
+            people can set up legislative, executive and judicial systems in India. For more details <a>click here</a>.
+        </p>
+
+        <p><span class="bold-text">Articles </span>are the extended version of the preamble that defines guidelines in
+            detail to set up the
+            legislative,
+            executive and judicial system by citizens of India along with their fundamental rights and duties. There are
+            395
+            articles.</p>
+
+        <p><span class="bold-text">Parts</span> is a group of articles which correlates the common functionalities
+            defined by a certain number of
+            articles.
+            There are 22 parts. For more details <a>click here</a>.</p>
+
+        <p><span class="bold-text">Schedules</span> are the extended version of articles which contains a list of items
+            to be defined further. There
+            are 12
+            schedules. For more details <a>click here</a>.</p>
+
+        <p><span class="bold-text">Appendices</span> are the supplementary or subsidiary references present at the end
+            of Indian constitution. There
+            are 5
+            appendices. For more details <a>click here</a>.</p>
+
+        <p><span class="bold-text"> Amendments</span> are the changes introduced in indian constitution based on certain
+            criteria in certain articles
+            without
+            changing the entire document. There are 104 amendments introduced in Indian constitution. For more details
+            <a>click here</a>.</p>
+
+        <p> Let's start to understand the content presented in the articles of Indian constitution and also have a look
+            at below
+            table for list
+            of abbreviations used in this website. <a>Click here</a> to
+            continue.
+        </p>
+    </div>
+    <div class="extra-div"></div>
+    <div class="abbreviations-table">
+        <div class="abbreviations-header">List of Abbreviations</div>
+        <div class="abbreviations-content">
+            <table mat-table [dataSource]="abbreviations" class="mat-elevation-z8">
+
+                <ng-container matColumnDef="abbr">
+                    <th mat-header-cell *matHeaderCellDef> Abbreviation </th>
+                    <td mat-cell *matCellDef="let element"> {{element.abbr}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="fullForm">
+                    <th mat-header-cell *matHeaderCellDef> Full Form </th>
+                    <td mat-cell *matCellDef="let element"> {{element.fullForm}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+</div>

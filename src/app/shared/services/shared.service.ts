@@ -1,21 +1,29 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
     providedIn: 'root'
 })
 export class SharedService {
 
-    constructor() { }
+    private lang: string = 'en';
 
-    encrypt(plainText: string) {
+    constructor(private router: Router) { }
 
+    setLanguage(lang: string){
+        this.lang = lang;
+        //this.router.navigateByUrl('/home');
+        this.reloadCurrentRoute();
     }
 
-    base64Encode(text: string): string {
-        return btoa(text);
+    getLanguage(){
+        return this.lang;
     }
 
-    decode64Encode(text: string): string {
-        return atob(text);
+    reloadCurrentRoute() {
+        let currentUrl = this.router.url;
+        this.router.navigateByUrl('/id', {skipLocationChange: true}).then(() => {
+            this.router.navigate([currentUrl]);
+        });
     }
 }

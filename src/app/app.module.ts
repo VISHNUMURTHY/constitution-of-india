@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injector } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,6 +22,7 @@ import { UserComponent } from './user/user.component';
 import { CarouselComponent } from './common/components/carousel/carousel.component';
 import { PhotoVideoGalleryComponent } from './common/components/photo-video-gallery/photo-video-gallery.component';
 import { ComplaintsQueriesComponent } from './complaints-queries/complaints-queries.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -54,4 +55,12 @@ import { ComplaintsQueriesComponent } from './complaints-queries/complaints-quer
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(private injector: Injector) {
+    InjectorInstance = this.injector;
+  }
+
+ }
+
+ export let InjectorInstance: Injector;
