@@ -35,7 +35,7 @@ export const SALUTATION_TYPES = ['Mr.', 'Miss.', 'Mrs.', 'Mx.'];
 
 export const USER_NAVIGATION_LINKS = [
     {
-        'link': 'dashboard', 'title': 'Dashboard'
+        'link': 'preamble', 'title': 'Preamble'
     }, {
         'link': 'donations', 'title': 'My Donations'
     }, {

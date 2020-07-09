@@ -18,7 +18,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.languageForm.get('language').valueChanges.subscribe(val => {
-      console.log(val);
       this.sharedService.setLanguage(val);
     })
   }

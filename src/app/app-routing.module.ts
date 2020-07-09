@@ -17,9 +17,9 @@ const routes: Routes = [{ path: 'home', component: HomeComponent },
 { path: 'contact-us', component: ContactUsComponent },
 { path: 'donate', component: DonateComponent },
 {
-  path: 'user', component: UserComponent, children: [
-    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-    { path: 'dashboard', component: UserDashboardComponent },
+  path: 'indian-constituion', component: UserComponent, children: [
+    { path: '', redirectTo: 'preamble', pathMatch: 'full' },
+    { path: 'preamble', component: UserDashboardComponent },
     { path: 'complaints-queries', component: ComplaintsQueriesComponent }
   ]
 },
